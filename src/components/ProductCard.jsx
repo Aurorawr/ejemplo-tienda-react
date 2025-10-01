@@ -1,6 +1,4 @@
 import { Button, Card } from "react-bootstrap";
-import { NavLink } from "react-router";
-import { ROUTE_PATHS } from "../utils/constants";
 import { formatPrice } from "../utils/formatters";
 
 function ProductCard({ name, price, description, image, action=undefined, actionName="Ver" }) {
@@ -14,7 +12,7 @@ function ProductCard({ name, price, description, image, action=undefined, action
         <Card.Text className="d-flex flex-grow-1">
           {description}
         </Card.Text>
-        {action && (<Button variant="primary" onClick={action}>
+        {action && (<Button variant="primary">
           {actionName}
         </Button>)}
       </Card.Body>
