@@ -1,4 +1,4 @@
-name: CI - React with Vitest
+name: CI - Evaluación de pruebas
 
 on:
   push:
