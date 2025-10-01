@@ -1,0 +1,27 @@
+name: CI - React with Vitest
+
+on:
+  push:
+    branches: [ main ]   # solo corre cuando haces push a main
+  pull_request:
+    branches: [ main ]   # también corre en PR hacia main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests with Vitest
+        run: npm test
