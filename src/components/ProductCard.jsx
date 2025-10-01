@@ -12,7 +12,7 @@ function ProductCard({ name, price, description, image, action=undefined, action
         <Card.Text className="d-flex flex-grow-1">
           {description}
         </Card.Text>
-        {action && (<Button variant="primary" onClick={action}>
+        {action && (<Button variant="primary">
           {actionName}
         </Button>)}
       </Card.Body>

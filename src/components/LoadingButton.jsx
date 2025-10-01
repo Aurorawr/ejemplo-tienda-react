@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "react-bootstrap";
 
 // El prop ...rest permite pasar cualquier otro prop que Button acepte
@@ -18,10 +18,6 @@ function LoadingButton({ onClickPromise, buttonText, buttonLoadingText = "Proces
       setIsLoading(false);
     }
   }
-
-  useEffect(() => {
-    console.log("isLoading cambió a:", isLoading);
-  }, [isLoading]);
 
   return (
     <Button
