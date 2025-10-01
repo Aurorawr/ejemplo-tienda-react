@@ -25,3 +25,7 @@ jobs:
 
       - name: Run tests with Vitest
         run: npm test
+
+      - name: Deploy
+        if: success()
+        run: curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
